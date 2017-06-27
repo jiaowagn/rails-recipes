@@ -46,7 +46,7 @@ class Admin::EventsController < AdminController
   protected
 
   def event_params
-    params.require(:event).permit(:name, :description, :friendly_id, :state)
+    params.require(:event).permit(:name, :description, :friendly_id, :state, :category_id)
   end
 
 end
