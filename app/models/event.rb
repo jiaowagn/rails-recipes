@@ -3,6 +3,8 @@ class Event < ApplicationRecord
  validates_presence_of :name, :friendly_id
  validates_uniqueness_of :friendly_id
  validates_format_of :friendly_id, :with => /\A[a-z0-9\-]+\z/
+ STATE = ["draft", "public", "private"]
+ validates_inclusion_of :state, :in => STATE 
 
  before_validation :generate_friendly_id, :on => :create
 
