@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "events#index"
+    resources :versions do
+      post :undo
+    end
+
     resources :events do
       resources :tickets, :controller => "event_tickets"
     end
