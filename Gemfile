@@ -44,6 +44,7 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'select2-rails'
 gem 'nested_form_fields'
+gem 'paper_trail'
 
 group :development, :test do
   gem 'rspec-rails'
